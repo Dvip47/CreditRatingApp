@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Flask/IDE specific
+instance/
+*.db
+*.sqlite3
+
+# macOS junk
+.DS_Store
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Logs
+*.log
+
+# Python environment variables
+.env
+.env.*
+
+# Migrations (if using Flask-Migrate or Alembic)
+migrations/
+
+# Cache
+.cache/
+*.egg-info/
+dist/
+build/
