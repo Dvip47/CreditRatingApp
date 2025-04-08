@@ -1,11 +1,10 @@
 from flask import Blueprint, request, jsonify
-from models import Mortgage  # Make sure this exists and is defined correctly
-from db.connection import get_db_session  # Ensure this returns a SQLAlchemy session
-from credit_rating import calculate_credit_rating  # Your credit rating function
+from models import Mortgage  
+from db.connection import get_db_session 
+from credit_rating import calculate_credit_rating 
 
 mortgage_routes = Blueprint('mortgage_routes', __name__)
 
-# 🚀 Route to add a new mortgage (POST)
 @mortgage_routes.route('/mortgages', methods=['POST'])
 def add_mortgage():
     data = request.get_json()
@@ -30,7 +29,6 @@ def add_mortgage():
     finally:
         session.close()
 
-# ✅ Route to get all mortgages (GET)
 @mortgage_routes.route('/mortgages', methods=['GET'])
 def get_mortgages():
     session = get_db_session()
